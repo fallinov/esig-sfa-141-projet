@@ -699,8 +699,6 @@ html {
 
 
 @media (max-width: 768px) {
-
-
     .header-logo .logo-title {
         font-size: var(--font-size-base);
     }
@@ -715,7 +713,11 @@ html {
 
     /* Ajustement des sections sur mobile */
     section {
-        padding: var(--spacing-lg) var(--spacing-md); /* Aligné sur desktop */
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .section-title {
+        margin-bottom: var(--spacing-lg);
     }
 }
 
@@ -1396,7 +1398,7 @@ li.checklist-item::before {
 
 /* Section générique - style minimal sans bordures ni ombres */
 section {
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: var(--spacing-2xl) var(--spacing-md);
     border: none;
     box-shadow: none;
     border-radius: 0;
@@ -1406,7 +1408,7 @@ section {
 .section-title {
     text-align: center;
     margin-top: 0;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
     color: var(--color-text-primary);
 }
 
@@ -1852,6 +1854,11 @@ article p {
     display: grid;
     gap: var(--spacing-xl);
     align-items: stretch; /* Cartes de même hauteur */
+}
+
+/* Espacement entre grilles successives */
+.grid + .grid {
+    margin-top: var(--spacing-xl);
 }
 
 .grid.cols-2 {

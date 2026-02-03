@@ -285,7 +285,7 @@
                     </article>
                 </div>
 
-                <div class="grid cols-2" style="margin-top: var(--space-lg);">
+                <div class="grid cols-2">
                     <article class="card">
                         <div class="card-icon">
                             <i data-lucide="route" class="icon icon-xl"></i>
@@ -448,15 +448,25 @@
                     </article>
 
                     <article class="card">
-                        <h3>APIs publiques suggérées</h3>
+                        <h3>APIs publiques validées</h3>
+                        <p><strong>Critères</strong> : gratuite, images dispo, endpoint "liste" + "détail /id", contenu riche.</p>
+                        <h4>Sans clé API</h4>
                         <ul>
-                            <li><a href="https://pokeapi.co/" target="_blank">PokéAPI</a> - Pokémons (utilisé dans le tuto)</li>
+                            <li class="recommended"><a href="https://pokeapi.co/" target="_blank">PokéAPI</a> - Pokémons (utilisé dans le tuto)</li>
+                            <li class="recommended"><a href="https://rickandmortyapi.com/" target="_blank">Rick and Morty API</a> - Personnages de la série</li>
+                            <li class="recommended"><a href="https://restcountries.com/" target="_blank">REST Countries</a> - Pays du monde</li>
+                            <li><a href="https://jikan.moe/" target="_blank">Jikan API</a> - Anime/Manga (MyAnimeList)</li>
+                            <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">TheCocktailDB</a> - Recettes de cocktails</li>
+                            <li><a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO API</a> - Races de chiens</li>
+                            <li><a href="https://api.artic.edu/" target="_blank">Art Institute Chicago</a> - Œuvres d'art</li>
+                            <li><a href="https://dash.valorant-api.com/" target="_blank">Valorant API</a> - Agents et armes du jeu</li>
+                            <li><a href="https://thesimpsonsquoteapi.glitch.me/" target="_blank">Simpsons API</a> - Personnages des Simpsons</li>
+                        </ul>
+                        <h4>Avec clé gratuite</h4>
+                        <ul>
                             <li><a href="https://www.themoviedb.org/documentation/api" target="_blank">TMDB</a> - Films et séries</li>
-                            <li><a href="https://openlibrary.org/developers/api" target="_blank">OpenLibrary</a> - Livres</li>
-                            <li><a href="https://www.deezer.com/fr/developers" target="_blank">Deezer</a> - Musique</li>
-                            <li><a href="https://rawg.io/apidocs" target="_blank">RAWG</a> - Jeux vidéo</li>
-                            <li><a href="https://restcountries.com/" target="_blank">REST Countries</a> - Pays du monde</li>
-                            <li><a href="https://github.com/public-apis/public-apis" target="_blank">Liste d'APIs publiques</a> - Catalogue complet</li>
+                            <li><a href="https://rawg.io/apidocs" target="_blank">RAWG</a> - Jeux vidéo (20k req/mois)</li>
+                            <li><a href="https://developer.marvel.com/" target="_blank">Marvel API</a> - Comics et super-héros</li>
                         </ul>
                     </article>
 
@@ -536,6 +546,7 @@
                         <h3>Déroulement (~20 minutes)</h3>
                         <ul>
                             <li><strong>Présentation/démo</strong> : 2-3 minutes - Montrer l'application et ses fonctionnalités</li>
+                            <li><strong>Améliorations possibles</strong> : Ce que vous amélioreriez avec plus de temps</li>
                             <li><strong>Questions théoriques</strong> : 2 questions du pool (Vue.js, Pinia, API, Vuetify)</li>
                             <li><strong>Questions pratiques</strong> : 4 questions sur <em>votre code</em></li>
                         </ul>
@@ -559,7 +570,19 @@
                     </article>
                 </div>
 
-                <div class="card" style="margin-top: var(--space-lg);">
+                <div class="card" style="margin-top: var(--spacing-xl);">
+                    <h3>Présenter les améliorations possibles</h3>
+                    <p>Durant votre présentation, vous devez aussi évoquer <strong>ce que vous amélioreriez</strong> si vous aviez plus de temps :</p>
+                    <ul>
+                        <li>Démontre du <strong>recul</strong> sur votre projet</li>
+                        <li>Identifie ce qui <strong>fonctionne moins bien</strong></li>
+                        <li>Propose des <strong>évolutions futures</strong></li>
+                        <li>Valorise l'<strong>autocritique</strong> et la vision d'ensemble</li>
+                    </ul>
+                    <p><em>Exemples : "J'aurais aimé ajouter un tri par date", "Le design de la page détail pourrait être amélioré", "Je voudrais implémenter la pagination"...</em></p>
+                </div>
+
+                <div class="card" style="margin-top: var(--spacing-xl);">
                     <h3>Exemples de questions</h3>
                     <div class="grid cols-2">
                         <div>
@@ -583,10 +606,21 @@
                     </div>
                 </div>
 
-                <div class="card" style="margin-top: var(--space-lg); background: var(--color-warning-bg, #fff3cd); border-left: 4px solid var(--color-warning, #ffc107);">
+                <div class="card" style="margin-top: var(--spacing-xl); background: var(--color-warning-bg, #fff3cd); border-left: 4px solid var(--color-warning, #ffc107);">
                     <h3>Important : Connaître son code</h3>
                     <p>L'oral vise à vérifier que <strong>vous comprenez le code que vous avez écrit</strong>. Si vous ne pouvez pas expliquer une partie de votre code, cela sera pénalisé.</p>
                     <p><strong>Conseil</strong> : Relisez votre code avant l'oral et assurez-vous de pouvoir expliquer chaque fonction, chaque choix technique.</p>
+                </div>
+
+                <div class="card" style="margin-top: var(--spacing-xl);">
+                    <h3>Attitude professionnelle</h3>
+                    <p>L'oral est aussi l'occasion de démontrer votre <strong>professionnalisme</strong> :</p>
+                    <ul>
+                        <li><strong>Saluer le jury</strong> en entrant dans la salle</li>
+                        <li>Adopter une <strong>posture correcte</strong> (pas affalé sur la chaise)</li>
+                        <li>Maintenir un <strong>contact visuel</strong> avec les évaluateurs (pas uniquement l'écran)</li>
+                        <li>Communiquer de manière <strong>claire et respectueuse</strong></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -745,7 +779,7 @@
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-23" class="checklist-checkbox">
-                                <label for="check-23" class="checklist-label">Démo de 2-3 min préparée</label>
+                                <label for="check-23" class="checklist-label">Démo de 2-3 min préparée + améliorations possibles</label>
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-24" class="checklist-checkbox">
