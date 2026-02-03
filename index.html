@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet évaluatif – Module C141</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Référence apprenants : objectifs, consignes, jalons, outils, évaluation et ressources pour le projet Vue.js + Vuetify avec API.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+<body id="top">
+<a class="skip-link" tabindex="1" href="#contenu">Aller au contenu</a>
+<!-- Contrôle CSS du menu (checkbox cachée) -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" tabindex="-1" aria-hidden="true">
+<label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu" aria-hidden="true">Ouvrir le menu</label>
+
+
+<!-- Header principal (sorti de main-wrapper) -->
+<header class="main-header">
+    <div class="header-content">
+        <div class="header-logo">
+            <a href="#top" class="logo-link">
+                <img src="img/divcom-logo.png" alt="Logo ESIG" class="logo-icon">
+                <div class="logo-text">
+                    <div class="logo-title">Projet évaluatif</div>
+                    <p class="logo-subtitle">ESIG - Module C141</p>
+                </div>
+            </a>
+        </div>
+        <button type="button" class="burger-menu" aria-controls="sidebar-nav" aria-label="Ouvrir le menu"
+                aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </div>
+</header>
+
+<!-- Menu vertical sticky (après le header) -->
+<nav id="sidebar-nav" class="sidebar-nav" aria-label="Navigation des sections">
+    <div class="sidebar-content">
+        <ul class="sidebar-menu">
+            <li><a href="#objectifs" class="sidebar-link" data-section="objectifs" data-tooltip="Objectifs"><i
+                    data-lucide="target"></i> <span class="link-text">Objectifs</span></a></li>
+            <li><a href="#a-rendre" class="sidebar-link" data-section="a-rendre" data-tooltip="À rendre"><i
+                    data-lucide="clipboard-list"></i> <span class="link-text">À rendre</span></a></li>
+            <li><a href="#exigences" class="sidebar-link" data-section="exigences" data-tooltip="Exigences"><i
+                    data-lucide="check-circle"></i> <span class="link-text">Exigences</span></a></li>
+            <li><a href="#planification" class="sidebar-link" data-section="planification" data-tooltip="Planification"><i
+                    data-lucide="calendar"></i> <span class="link-text">Planification</span></a></li>
+            <li><a href="#outils" class="sidebar-link" data-section="outils" data-tooltip="Ressources"><i
+                    data-lucide="book"></i> <span class="link-text">Ressources</span></a></li>
+            <li><a href="#evaluation" class="sidebar-link" data-section="evaluation" data-tooltip="Évaluation"><i
+                    data-lucide="search"></i> <span class="link-text">Évaluation</span></a></li>
+            <li><a href="#oral" class="sidebar-link" data-section="oral" data-tooltip="Défense orale"><i
+                    data-lucide="mic"></i> <span class="link-text">Défense orale</span></a></li>
+            <li><a href="#support" class="sidebar-link" data-section="support" data-tooltip="Support & IA"><i
+                    data-lucide="message-circle"></i> <span class="link-text">Support & IA</span></a></li>
+            <li><a href="#checklist" class="sidebar-link" data-section="checklist" data-tooltip="Checklist"><i
+                    data-lucide="check-square"></i> <span class="link-text">Checklist</span></a></li>
+            <li class="sidebar-close-item"><a href="#" class="sidebar-link" data-close-menu="true"><i
+                    data-lucide="x"></i> <span class="link-text">Fermer le menu</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Wrapper principal qui contient tout le contenu -->
+<div class="main-wrapper">
+
+    <main id="contenu" class="container">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="section-content">
+                <h1 id="hero-title" class="hero-title">
+                    Projet évaluatif<br>
+                    <span class="highlight">Vue.js + Vuetify + API</span>
+                </h1>
+
+                <ul class="hero-info">
+                    <li class="manual-icons">
+                        <i data-lucide="code"></i>
+                        Projet <strong>40%</strong><br>
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="mic"></i>
+                        Défense orale <strong>60%</strong>
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="clock"></i>
+                        <strong>6 semaines</strong>
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="calendar-check"></i>
+                        <strong>Revue hebdomadaire</strong>
+                    </li>
+                </ul>
+
+                <div class="hero-tasks">
+                    <h2>Ta mission</h2>
+                    <ul>
+                        <li class="manual-icons">
+                            <i data-lucide="check"></i>
+                            Construire une application <strong>Vue.js 3</strong> avec <strong>Vuetify</strong>
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="check"></i>
+                            Connecter une <strong>API externe</strong> avec <strong>Axios</strong>
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="check"></i>
+                            Gérer l'état global avec <strong>Pinia</strong>
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="check"></i>
+                            Déployer sur <strong>GitHub Pages</strong> ou <strong>Vercel</strong>
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="check"></i>
+                            <strong>Défendre ton projet</strong> lors d'un oral de 20 min
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#exigences" class="btn btn-primary">
+                        Voir les exigences
+                    </a>
+                    <a href="#evaluation" class="btn btn-secondary">
+                        Évaluation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Objectifs -->
+        <section id="objectifs" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Objectifs</h2>
+                <div class="objectifs-grid">
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="layers" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Architecture composants</h3>
+                        <p>Découper une interface en composants Vue.js réutilisables et maintenables</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="database" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Gestion d'état</h3>
+                        <p>Centraliser les données avec Pinia : state, actions, getters</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="globe" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Connexion API</h3>
+                        <p>Récupérer et afficher des données externes avec Axios</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="smartphone" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Design responsive</h3>
+                        <p>Créer des interfaces adaptatives avec Vuetify et Material Design</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="brain" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Compréhension profonde</h3>
+                        <p>100% du code produit doit être compris et <strong>expliqué lors de l'oral</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À rendre -->
+        <section id="a-rendre" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">À rendre</h2>
+                <div class="grid cols-2">
+                    <article class="card">
+                        <h3>Application en ligne</h3>
+                        <ul>
+                            <li>Hébergée sur <strong>GitHub Pages</strong> ou <strong>Vercel</strong></li>
+                            <li>Application <strong>fonctionnelle</strong> sans erreurs console</li>
+                            <li>Design <strong>responsive</strong> mobile → desktop</li>
+                            <li>Connexion à une <strong>API externe</strong></li>
+                            <li>Dépôt <strong>GitHub</strong> propre et structuré</li>
+                        </ul>
+                        <h4>Arborescence type</h4>
+                        <pre><code>mon-projet/
+├── src/
+│   ├── components/
+│   ├── views/
+│   ├── stores/
+│   ├── plugins/
+│   │   └── axios.js
+│   ├── router/
+│   │   └── index.js
+│   └── App.vue
+├── public/
+├── .env.example
+├── package.json
+└── README.md</code></pre>
+                    </article>
+                    <article class="card">
+                        <h3>Documentation (README.md)</h3>
+                        <ul>
+                            <li><strong>Description</strong> : Concept et objectif de l'application</li>
+                            <li><strong>Fonctionnalités</strong> : Liste des features implémentées</li>
+                            <li><strong>Installation</strong> : Instructions pour lancer le projet</li>
+                            <li><strong>API utilisée</strong> : Source et endpoints</li>
+                            <li><strong>Technologies</strong> : Vue.js, Vuetify, Pinia, Axios, etc.</li>
+                            <li><strong>Captures d'écran</strong> : Visuels de l'application</li>
+                            <li><strong>Transparence IA</strong> : Usage déclaré (voir section Support)</li>
+                        </ul>
+                        <h4>Fichiers obligatoires</h4>
+                        <ul>
+                            <li><span class="mono">.env.example</span> - Template des variables d'environnement</li>
+                            <li><span class="mono">mock.json</span> - Backup des données API</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Exigences -->
+        <section id="exigences" class="section-bg-medium">
+            <div class="section-content">
+                <h2 class="section-title">Exigences techniques</h2>
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-icon">
+                            <i data-lucide="component" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Vue.js 3</h3>
+                        <p>Votre application doit utiliser Vue.js 3 avec la Composition API :</p>
+                        <ul>
+                            <li><strong>Composition API</strong> : <span class="mono">&lt;script setup&gt;</span> obligatoire</li>
+                            <li><strong>Réactivité</strong> : <span class="mono">ref</span>, <span class="mono">reactive</span>, <span class="mono">computed</span></li>
+                            <li><strong>Composants</strong> : Au moins 3-4 composants réutilisables</li>
+                            <li><strong>Props & Emit</strong> : Communication parent-enfant</li>
+                            <li><strong>Lifecycle</strong> : <span class="mono">onMounted</span> pour les appels API</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">
+                            <i data-lucide="database" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Pinia & API</h3>
+                        <p>Gestion de l'état et connexion aux données :</p>
+                        <ul>
+                            <li><strong>Store Pinia</strong> : State, actions, getters</li>
+                            <li><strong>Axios</strong> : Configuration dans <span class="mono">plugins/axios.js</span></li>
+                            <li><strong>Variables .env</strong> : URL API préfixée <span class="mono">VITE_</span></li>
+                            <li><strong>Mock JSON</strong> : Fallback si API indisponible</li>
+                            <li><strong>localStorage</strong> : Persistance des favoris</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">
+                            <i data-lucide="palette" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Vuetify & UX</h3>
+                        <p>Interface utilisateur avec Material Design :</p>
+                        <ul>
+                            <li><strong>Composants Vuetify</strong> : v-card, v-btn, v-text-field, etc.</li>
+                            <li><strong>Grille responsive</strong> : v-container, v-row, v-col</li>
+                            <li><strong>Navigation</strong> : v-app-bar, v-navigation-drawer</li>
+                            <li><strong>Feedback</strong> : v-snackbar, v-dialog, v-progress</li>
+                            <li><strong>Mobile-first</strong> : Testé sur mobile et desktop</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="grid cols-2" style="margin-top: var(--space-lg);">
+                    <article class="card">
+                        <div class="card-icon">
+                            <i data-lucide="route" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Fonctionnalités requises</h3>
+                        <ul>
+                            <li><strong>Page d'accueil</strong> : Liste/grille des données avec v-card</li>
+                            <li><strong>Page de détail</strong> : Route dynamique <span class="mono">/item/:id</span></li>
+                            <li><strong>Navigation</strong> : Menu fonctionnel (header ou drawer)</li>
+                            <li><strong>Favoris</strong> : Ajout/suppression avec persistance</li>
+                            <li><strong>Recherche</strong> : Filtrage par texte</li>
+                            <li><strong>Filtre/Tri</strong> : Au moins un critère de filtre ou tri</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">
+                            <i data-lucide="git-branch" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Qualité du code</h3>
+                        <ul>
+                            <li><strong>Structure</strong> : Dossiers <span class="mono">components/</span>, <span class="mono">views/</span>, <span class="mono">stores/</span></li>
+                            <li><strong>Commits</strong> : Réguliers avec messages clairs</li>
+                            <li><strong>README</strong> : Documentation complète</li>
+                            <li><strong>.env.example</strong> : Template sans secrets</li>
+                            <li><strong>.gitignore</strong> : <span class="mono">.env</span> et <span class="mono">node_modules</span> ignorés</li>
+                            <li><strong>Pas d'erreurs</strong> : Console propre (pas de warnings critiques)</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Planification (timeline) -->
+        <section id="planification" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Planification</h2>
+                <ol class="timeline" role="list" aria-label="Planification du projet">
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaine 1</span>
+                        <div class="timeline-card">
+                            <h3>Lancement & Conception</h3>
+                            <p>Choisir son sujet et poser les fondations.</p>
+                            <ul>
+                                <li>Choix du <strong>sujet</strong> et de l'<strong>API</strong></li>
+                                <li>Validation de l'API par l'enseignant</li>
+                                <li>Création du <strong>sitemap</strong> préliminaire</li>
+                                <li>Création du dépôt GitHub</li>
+                                <li>Début de l'exercice <strong>Pocket Vuetify</strong> (étapes 1-12)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaine 2</span>
+                        <div class="timeline-card">
+                            <h3>Mise en place technique</h3>
+                            <p>Configurer l'environnement et connecter l'API.</p>
+                            <ul>
+                                <li>Configuration <span class="mono">.env</span> et <span class="mono">axios.js</span></li>
+                                <li>Création du <strong>store Pinia</strong></li>
+                                <li>Premier appel API fonctionnel</li>
+                                <li>Affichage basique des données</li>
+                                <li>Suite Pocket Vuetify (étapes 13-17)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaines 3-4</span>
+                        <div class="timeline-card">
+                            <h3>Développement</h3>
+                            <p>Développer les fonctionnalités principales.</p>
+                            <ul>
+                                <li>Page d'accueil avec <strong>liste/grille</strong></li>
+                                <li>Page de détail avec <strong>route dynamique</strong></li>
+                                <li>Système de <strong>favoris</strong></li>
+                                <li><strong>Recherche et filtres</strong></li>
+                                <li>Revue hebdomadaire avec l'enseignant</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaine 5</span>
+                        <div class="timeline-card">
+                            <h3>Finalisation</h3>
+                            <p>Peaufiner et documenter.</p>
+                            <ul>
+                                <li><strong>Mock JSON</strong> créé et testé</li>
+                                <li><strong>localStorage</strong> pour la persistance</li>
+                                <li>Design responsive finalisé</li>
+                                <li><strong>README.md</strong> complet</li>
+                                <li>Déploiement sur GitHub Pages / Vercel</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="mic"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar-check" aria-hidden="true"></i> Semaine 6</span>
+                        <div class="timeline-card">
+                            <h3>Rendu & Défense orale</h3>
+                            <p>Livrer et défendre son projet.</p>
+                            <ul>
+                                <li><strong>Rendu du projet</strong> (veille de l'oral)</li>
+                                <li>Préparation de la <strong>démo</strong> (2-3 min)</li>
+                                <li>Révision du <strong>code</strong> et de la <strong>théorie</strong></li>
+                                <li><strong>Défense orale</strong> : 20 minutes par candidat</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section Ressources et outils -->
+        <section id="outils" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Ressources</h2>
+                <div class="cards" aria-label="Ressources et outils">
+                    <article class="card">
+                        <h3>Documentation officielle</h3>
+                        <ul>
+                            <li class="recommended"><a href="https://devjs.ch/vue/" target="_blank">devjs.ch - Vue.js</a> - Support de cours principal</li>
+                            <li class="recommended"><a href="https://devjs.ch/pinia/" target="_blank">devjs.ch - Pinia</a> - Gestion d'état</li>
+                            <li class="recommended"><a href="https://devjs.ch/api/" target="_blank">devjs.ch - API</a> - Connexion aux données</li>
+                            <li><a href="https://vuejs.org/guide/" target="_blank">Vue.js 3 - Guide officiel</a></li>
+                            <li><a href="https://vuetifyjs.com/" target="_blank">Vuetify 3 - Documentation</a></li>
+                            <li><a href="https://pinia.vuejs.org/" target="_blank">Pinia - Documentation officielle</a></li>
+                            <li><a href="https://router.vuejs.org/" target="_blank">Vue Router - Documentation</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Vidéos tutoriels</h3>
+                        <p>Vidéos disponibles sur Teams (Thomas Tirole) :</p>
+                        <ul>
+                            <li class="recommended"><strong>Mettre en place l'API</strong> - Configuration .env, axios.js, store</li>
+                            <li class="recommended"><strong>Tester l'affichage Vuetify</strong> - v-for, v-card, données dynamiques</li>
+                            <li class="recommended"><strong>Utiliser un mock JSON</strong> - Éviter les appels API répétés</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Exercice de référence</h3>
+                        <ul>
+                            <li class="recommended"><a href="https://kode.ch/pokedex/" target="_blank">Pocket Vuetify (Pokédex)</a> - Exercice guidé complet</li>
+                            <li><a href="https://kode.ch/vue-bases/" target="_blank">Exercices Vue.js de base</a> - 8 exercices fondamentaux</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>APIs publiques suggérées</h3>
+                        <ul>
+                            <li><a href="https://pokeapi.co/" target="_blank">PokéAPI</a> - Pokémons (utilisé dans le tuto)</li>
+                            <li><a href="https://www.themoviedb.org/documentation/api" target="_blank">TMDB</a> - Films et séries</li>
+                            <li><a href="https://openlibrary.org/developers/api" target="_blank">OpenLibrary</a> - Livres</li>
+                            <li><a href="https://www.deezer.com/fr/developers" target="_blank">Deezer</a> - Musique</li>
+                            <li><a href="https://rawg.io/apidocs" target="_blank">RAWG</a> - Jeux vidéo</li>
+                            <li><a href="https://restcountries.com/" target="_blank">REST Countries</a> - Pays du monde</li>
+                            <li><a href="https://github.com/public-apis/public-apis" target="_blank">Liste d'APIs publiques</a> - Catalogue complet</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Environnement de développement</h3>
+                        <ul>
+                            <li class="recommended"><strong>IDE</strong> : <a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a> (recommandé)</li>
+                            <li><strong>Extension navigateur</strong> : <a href="https://devtools.vuejs.org/" target="_blank">Vue DevTools</a></li>
+                            <li><strong>Versionnement</strong> : <a href="https://git-scm.com/" target="_blank">Git</a> + <a href="https://github.com/" target="_blank">GitHub</a></li>
+                            <li><strong>Test API</strong> : <a href="https://www.postman.com/" target="_blank">Postman</a></li>
+                            <li><strong>Hébergement</strong> : <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> ou <a href="https://vercel.com/" target="_blank">Vercel</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Évaluation -->
+        <section id="evaluation" class="section-bg-medium">
+            <div class="section-content">
+                <h2 class="section-title">Évaluation du projet (40%)</h2>
+                <div class="card">
+                    <h3 id="evaluation-grid-title">Grille d'évaluation - Partie projet</h3>
+                    <p>Le projet est noté sur <strong>40 points</strong>, convertis ensuite en note sur 6. Cette partie compte pour <strong>40%</strong> de la note finale.</p>
+                    <div class="evaluation-cards" aria-label="Grille d'évaluation">
+                        <article class="evaluation-card">
+                            <header class="evaluation-card-header">
+                                <h4>Fonctionnalités</h4>
+                                <span class="evaluation-card-points">17 pts</span>
+                            </header>
+                            <p class="evaluation-card-focus"><strong>Focus :</strong> Ce que fait l'application</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Page d'accueil, page détail, routage dynamique, navigation, favoris, recherche, filtre/tri, feedback utilisateur.</p>
+                        </article>
+                        <article class="evaluation-card">
+                            <header class="evaluation-card-header">
+                                <h4>Architecture technique</h4>
+                                <span class="evaluation-card-points">11 pts</span>
+                            </header>
+                            <p class="evaluation-card-focus"><strong>Focus :</strong> Comment c'est construit</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Store Pinia bien structuré, composants réutilisables, séparation du code, responsive, mock JSON, connexion API, localStorage.</p>
+                        </article>
+                        <article class="evaluation-card">
+                            <header class="evaluation-card-header">
+                                <h4>Qualité du code</h4>
+                                <span class="evaluation-card-points">7 pts</span>
+                            </header>
+                            <p class="evaluation-card-focus"><strong>Focus :</strong> Propreté et documentation</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Organisation des fichiers, code commenté, README complet, .env.example, commits réguliers avec messages clairs.</p>
+                        </article>
+                        <article class="evaluation-card">
+                            <header class="evaluation-card-header">
+                                <h4>UX / Design</h4>
+                                <span class="evaluation-card-points">5 pts</span>
+                            </header>
+                            <p class="evaluation-card-focus"><strong>Focus :</strong> Expérience utilisateur</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Design cohérent, gestion des erreurs, navigation intuitive, icône/titre personnalisés, footer personnalisé.</p>
+                        </article>
+                        <article class="evaluation-card">
+                            <header class="evaluation-card-header">
+                                <h4>Bonus</h4>
+                                <span class="evaluation-card-points">+3 pts</span>
+                            </header>
+                            <p class="evaluation-card-focus"><strong>Focus :</strong> Au-delà des attentes</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Images avec alt/fallback, animations CSS pertinentes, design particulièrement soigné.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Défense orale -->
+        <section id="oral" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Défense orale (60%)</h2>
+                <div class="grid cols-2">
+                    <article class="card">
+                        <h3>Déroulement (~20 minutes)</h3>
+                        <ul>
+                            <li><strong>Présentation/démo</strong> : 2-3 minutes - Montrer l'application et ses fonctionnalités</li>
+                            <li><strong>Questions théoriques</strong> : 2 questions du pool (Vue.js, Pinia, API, Vuetify)</li>
+                            <li><strong>Questions pratiques</strong> : 4 questions sur <em>votre code</em></li>
+                        </ul>
+                        <h4>Pondération des questions</h4>
+                        <ul>
+                            <li>Questions théoriques : pondération <strong>×1</strong></li>
+                            <li>Questions pratiques : pondération <strong>×1.5</strong></li>
+                        </ul>
+                        <p><em>Les questions pratiques comptent davantage car elles valident la compréhension réelle du code.</em></p>
+                    </article>
+                    <article class="card">
+                        <h3>Barème des réponses</h3>
+                        <ul>
+                            <li><strong>6 - Excellent</strong> : Réponse complète, précise, avec exemples</li>
+                            <li><strong>5 - Très bien</strong> : Réponse correcte et bien formulée</li>
+                            <li><strong>4 - Bien</strong> : Réponse correcte avec quelques imprécisions</li>
+                            <li><strong>3 - Suffisant</strong> : Réponse partielle, compréhension de base</li>
+                            <li><strong>2 - Insuffisant</strong> : Réponse vague ou incorrecte</li>
+                            <li><strong>1 - Très insuffisant</strong> : Pas de réponse ou totalement faux</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="card" style="margin-top: var(--space-lg);">
+                    <h3>Exemples de questions</h3>
+                    <div class="grid cols-2">
+                        <div>
+                            <h4>Questions théoriques</h4>
+                            <ul>
+                                <li>Quelle est la différence entre <span class="mono">ref</span> et <span class="mono">reactive</span> ?</li>
+                                <li>À quoi sert une propriété <span class="mono">computed</span> ?</li>
+                                <li>Expliquez le rôle de Pinia dans une application Vue.js.</li>
+                                <li>Pourquoi utilise-t-on un fichier <span class="mono">.env</span> ?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Questions pratiques (sur votre code)</h4>
+                            <ul>
+                                <li>"Explique-moi cette fonction, que fait-elle ?"</li>
+                                <li>"Pourquoi as-tu utilisé <span class="mono">computed</span> ici ?"</li>
+                                <li>"Comment fonctionne ton store ?"</li>
+                                <li>"Que se passe-t-il si je clique sur ce bouton ?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: var(--space-lg); background: var(--color-warning-bg, #fff3cd); border-left: 4px solid var(--color-warning, #ffc107);">
+                    <h3>Important : Connaître son code</h3>
+                    <p>L'oral vise à vérifier que <strong>vous comprenez le code que vous avez écrit</strong>. Si vous ne pouvez pas expliquer une partie de votre code, cela sera pénalisé.</p>
+                    <p><strong>Conseil</strong> : Relisez votre code avant l'oral et assurez-vous de pouvoir expliquer chaque fonction, chaque choix technique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Support & IA -->
+        <section id="support" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Support & IA</h2>
+                <div class="grid cols-2">
+                    <article class="card">
+                        <h3>Support et aide</h3>
+                        <ul>
+                            <li><strong>Revue hebdomadaire</strong> : 5-10 min par élève en classe</li>
+                            <li><strong>Canal</strong> : Teams du cours pour les questions</li>
+                            <li><strong>Délai</strong> : Réponse sous 48h en période de cours</li>
+                            <li><strong>Format attendu</strong> : Lien GitHub, description du problème, captures si besoin</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Utilisation de l'IA</h3>
+                        <p>L'utilisation d'outils d'IA (ChatGPT, GitHub Copilot, Claude, etc.) est <strong>autorisée</strong>
+                            sous conditions strictes :</p>
+                        <ul>
+                            <li><strong>Compréhension obligatoire</strong> : Vous devez comprendre 100% du code</li>
+                            <li><strong>Oral décisif</strong> : Vous devrez expliquer votre code lors de la défense</li>
+                            <li><strong>Transparence</strong> : Déclarez l'usage d'IA dans votre README</li>
+                            <li><strong>Personnalisation</strong> : Adaptez le code à votre projet</li>
+                        </ul>
+                        <p><strong>Attention :</strong> Un code non compris = mauvaise note à l'oral (60% de la note finale)</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Checklist -->
+        <section id="checklist" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Checklist d'auto-évaluation</h2>
+                <div class="checklist-progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                         aria-label="Progression de la checklist">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">0% complété</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-category">
+                        <h3>Fonctionnalités</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-1" class="checklist-checkbox">
+                                <label for="check-1" class="checklist-label">Page d'accueil avec liste/grille de données</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-2" class="checklist-checkbox">
+                                <label for="check-2" class="checklist-label">Page de détail fonctionnelle</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-3" class="checklist-checkbox">
+                                <label for="check-3" class="checklist-label">Routage dynamique avec paramètre :id</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-4" class="checklist-checkbox">
+                                <label for="check-4" class="checklist-label">Navigation (header ou menu)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-5" class="checklist-checkbox">
+                                <label for="check-5" class="checklist-label">Système de favoris</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-6" class="checklist-checkbox">
+                                <label for="check-6" class="checklist-label">Recherche par texte</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-7" class="checklist-checkbox">
+                                <label for="check-7" class="checklist-label">Filtre ou tri implémenté</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-8" class="checklist-checkbox">
+                                <label for="check-8" class="checklist-label">Feedback utilisateur (snackbar, etc.)</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>Architecture technique</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-9" class="checklist-checkbox">
+                                <label for="check-9" class="checklist-label">Store Pinia configuré</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-10" class="checklist-checkbox">
+                                <label for="check-10" class="checklist-label">Axios configuré avec .env</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-11" class="checklist-checkbox">
+                                <label for="check-11" class="checklist-label">Au moins 3 composants créés</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-12" class="checklist-checkbox">
+                                <label for="check-12" class="checklist-label">Composants Vuetify utilisés</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-13" class="checklist-checkbox">
+                                <label for="check-13" class="checklist-label">Mock JSON créé comme backup</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-14" class="checklist-checkbox">
+                                <label for="check-14" class="checklist-label">localStorage pour les favoris</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-15" class="checklist-checkbox">
+                                <label for="check-15" class="checklist-label">Design responsive (mobile + desktop)</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>Qualité du code</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-16" class="checklist-checkbox">
+                                <label for="check-16" class="checklist-label">Structure de fichiers organisée</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-17" class="checklist-checkbox">
+                                <label for="check-17" class="checklist-label">README.md complet</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-18" class="checklist-checkbox">
+                                <label for="check-18" class="checklist-label">.env.example fourni</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-19" class="checklist-checkbox">
+                                <label for="check-19" class="checklist-label">.env dans .gitignore</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-20" class="checklist-checkbox">
+                                <label for="check-20" class="checklist-label">Commits réguliers avec messages clairs</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-21" class="checklist-checkbox">
+                                <label for="check-21" class="checklist-label">Pas d'erreurs dans la console</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>Préparation oral</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-22" class="checklist-checkbox">
+                                <label for="check-22" class="checklist-label">Application déployée et fonctionnelle</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-23" class="checklist-checkbox">
+                                <label for="check-23" class="checklist-label">Démo de 2-3 min préparée</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-24" class="checklist-checkbox">
+                                <label for="check-24" class="checklist-label">Code relu et compris à 100%</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-25" class="checklist-checkbox">
+                                <label for="check-25" class="checklist-label">Théorie révisée (devjs.ch)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-26" class="checklist-checkbox">
+                                <label for="check-26" class="checklist-label">Capable d'expliquer chaque fonction</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mini-footer">
+        <p>&copy; 2026 ESIG - Module C141. Tous droits réservés.</p>
+        <p>Made with <i data-lucide="heart" class="icon icon-lg" aria-hidden="true"></i> by <a href="mailto:steve.fallet@esig.ch">Steve Fallet</a></p>
+
+        <img src="img/formateur-devant-tableau.webp" alt="Formateur devant un tableau">
+    </footer>
+</div>
+
+<!-- Scripts (local, no CDN) -->
+<script src="js/lucide.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
