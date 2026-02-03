@@ -402,8 +402,8 @@ a {
 
 /* Icônes des cartes */
 .card-icon {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
     text-align: center;
 }
@@ -1445,7 +1445,7 @@ section {
 /* Cartes unifiées pour les articles - style carte avec bordures et ombres */
 .livrable-card, .resource-card, .consigne-card, article {
     background: var(--color-white);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--shadow-md);
     border: var(--border-width) solid var(--color-primary);
@@ -1469,7 +1469,8 @@ section {
 
 .livrable-card h3, article h3 {
     color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
 }
 
 .livrable-card ul {
@@ -1512,7 +1513,13 @@ section {
 .resource-card ul li, .consigne-card ul li, article ul li {
     position: relative;
     padding-left: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+/* Paragraphes dans les cartes */
+article p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-secondary);
 }
 
 /* Dé-doublonnage: utilise la variante simple en puce ci-dessous */
@@ -1531,7 +1538,7 @@ section {
     top: 0.1em;
     width: 1em;
     height: 1em;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231E3A8A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='16,18 22,12 16,6'/%3E%3Cpolyline points='8,6 2,12 8,18'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232F3E3A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='16,18 22,12 16,6'/%3E%3Cpolyline points='8,6 2,12 8,18'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1843,23 +1850,43 @@ section {
 /* Grilles */
 .grid {
     display: grid;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
+    align-items: stretch; /* Cartes de même hauteur */
 }
-
-
-/* Checklist interactive (supprimée car doublon avec la section CHECKLIST PROFESSIONNELLE) */
 
 .grid.cols-2 {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .grid.cols-3 {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    align-items: start; /* Permet aux articles de s'ajuster à leur contenu */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .grid.cols-4 {
     grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cartes dans les grilles - hauteur égale */
+.grid article,
+.grid .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid article h3,
+.grid .card h3 {
+    flex-shrink: 0;
+}
+
+.grid article ul,
+.grid .card ul {
+    flex-grow: 1;
+}
+
+.grid article p:last-child,
+.grid .card p:last-child {
+    margin-bottom: 0;
 }
 
 /* KPI et boîtes d'information */
