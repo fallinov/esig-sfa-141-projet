@@ -223,6 +223,59 @@
     ['path', { d: 'm6 6 12 12' }]
   ];
 
+  // Additional icons for C141 project
+  const Mic = [
+    ['path', { d: 'M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z' }],
+    ['path', { d: 'M19 10v2a7 7 0 0 1-14 0v-2' }],
+    ['line', { x1: '12', x2: '12', y1: '19', y2: '22' }]
+  ];
+
+  const Database = [
+    ['ellipse', { cx: '12', cy: '5', rx: '9', ry: '3' }],
+    ['path', { d: 'M3 5V19A9 3 0 0 0 21 19V5' }],
+    ['path', { d: 'M3 12A9 3 0 0 0 21 12' }]
+  ];
+
+  const Globe = [
+    ['circle', { cx: '12', cy: '12', r: '10' }],
+    ['path', { d: 'M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20' }],
+    ['path', { d: 'M2 12h20' }]
+  ];
+
+  const Component = [
+    ['path', { d: 'M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z' }],
+    ['path', { d: 'm12 2 3.5 3.5L12 9 8.5 5.5 12 2Z' }],
+    ['path', { d: 'M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z' }],
+    ['path', { d: 'm12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z' }]
+  ];
+
+  const Route = [
+    ['circle', { cx: '6', cy: '19', r: '3' }],
+    ['path', { d: 'M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15' }],
+    ['circle', { cx: '18', cy: '5', r: '3' }]
+  ];
+
+  const GitBranch = [
+    ['line', { x1: '6', x2: '6', y1: '3', y2: '15' }],
+    ['circle', { cx: '18', cy: '6', r: '3' }],
+    ['circle', { cx: '6', cy: '18', r: '3' }],
+    ['path', { d: 'M18 9a9 9 0 0 1-9 9' }]
+  ];
+
+  const Lightbulb = [
+    ['path', { d: 'M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5' }],
+    ['path', { d: 'M9 18h6' }],
+    ['path', { d: 'M10 22h4' }]
+  ];
+
+  const Sparkles = [
+    ['path', { d: 'm12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z' }],
+    ['path', { d: 'M5 3v4' }],
+    ['path', { d: 'M19 17v4' }],
+    ['path', { d: 'M3 5h4' }],
+    ['path', { d: 'M17 19h4' }]
+  ];
+
   // Aliases used in this project
   const icons = {
     Target,
@@ -253,7 +306,16 @@
     X,
     // Aliases present in HTML
     CheckCircle2: CircleCheck,
-    Code2: CodeXml
+    Code2: CodeXml,
+    // C141 additional icons
+    Mic,
+    Database,
+    Globe,
+    Component,
+    Route,
+    GitBranch,
+    Lightbulb,
+    Sparkles
   };
 
   function createIcons({ nameAttr = 'data-lucide', attrs = {}, root = document } = {}) {
