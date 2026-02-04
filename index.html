@@ -61,8 +61,8 @@
                     data-lucide="book"></i> <span class="link-text">Ressources</span></a></li>
             <li><a href="#evaluation" class="sidebar-link" data-section="evaluation" data-tooltip="Évaluation"><i
                     data-lucide="search"></i> <span class="link-text">Évaluation</span></a></li>
-            <li><a href="#oral" class="sidebar-link" data-section="oral" data-tooltip="Défense orale"><i
-                    data-lucide="mic"></i> <span class="link-text">Défense orale</span></a></li>
+            <li><a href="#oral" class="sidebar-link" data-section="oral" data-tooltip="Examen oral"><i
+                    data-lucide="mic"></i> <span class="link-text">Examen oral</span></a></li>
             <li><a href="#support" class="sidebar-link" data-section="support" data-tooltip="Support & IA"><i
                     data-lucide="message-circle"></i> <span class="link-text">Support & IA</span></a></li>
             <li><a href="#checklist" class="sidebar-link" data-section="checklist" data-tooltip="Checklist"><i
@@ -88,11 +88,11 @@
                 <ul class="hero-info">
                     <li class="manual-icons">
                         <i data-lucide="code"></i>
-                        Projet <strong>40%</strong><br>
+                        Projet <strong>30 pts</strong><br>
                     </li>
                     <li class="manual-icons">
                         <i data-lucide="mic"></i>
-                        Défense orale <strong>60%</strong>
+                        Examen oral <strong>50 pts</strong>
                     </li>
                     <li class="manual-icons">
                         <i data-lucide="clock"></i>
@@ -299,12 +299,13 @@
                         </div>
                         <h3>Fonctionnalités requises</h3>
                         <ul>
-                            <li><strong>Page d'accueil</strong> : Liste/grille des données avec v-card</li>
+                            <li><strong>Page d'accueil</strong> : Liste ou grille des données (cards, tuiles, etc.)</li>
                             <li><strong>Page de détail</strong> : Route dynamique <span class="mono">/item/:id</span></li>
                             <li><strong>Navigation</strong> : Menu fonctionnel (header ou drawer)</li>
                             <li><strong>Favoris</strong> : Ajout/suppression avec persistance</li>
                             <li><strong>Recherche</strong> : Filtrage par texte</li>
-                            <li><strong>Filtre/Tri</strong> : Au moins un critère de filtre ou tri</li>
+                            <li><strong>Filtre</strong> : Par catégorie, type ou autre critère</li>
+                            <li><strong>Tri</strong> : Alphabétique, date, ou autre ordre</li>
                         </ul>
                     </article>
                     <article class="card">
@@ -343,7 +344,7 @@
                                 <li>Validation de l'API par l'enseignant</li>
                                 <li>Création du <strong>sitemap</strong> préliminaire</li>
                                 <li>Création du dépôt GitHub</li>
-                                <li>Début de l'exercice <strong>Pocket Vuetify</strong> (étapes 1-12)</li>
+                                <li>Début de l'exercice <strong>Pokédex Vuetify</strong> (étapes 1-12)</li>
                             </ul>
                         </div>
                     </li>
@@ -360,7 +361,7 @@
                                 <li>Création du <strong>store Pinia</strong></li>
                                 <li>Premier appel API fonctionnel</li>
                                 <li>Affichage basique des données</li>
-                                <li>Suite Pocket Vuetify (étapes 13-17)</li>
+                                <li>Suite Pokédex Vuetify (étapes 13-17)</li>
                             </ul>
                         </div>
                     </li>
@@ -387,14 +388,31 @@
                         </div>
                         <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaine 5</span>
                         <div class="timeline-card">
-                            <h3>Finalisation</h3>
-                            <p>Peaufiner et documenter.</p>
+                            <h3>Finalisation & Rendu</h3>
+                            <p>Peaufiner, documenter et livrer.</p>
                             <ul>
                                 <li><strong>Mock JSON</strong> créé et testé</li>
                                 <li><strong>localStorage</strong> pour la persistance</li>
                                 <li>Design responsive finalisé</li>
                                 <li><strong>README.md</strong> complet</li>
                                 <li>Déploiement sur GitHub Pages / Vercel</li>
+                                <li><strong>Rendu du projet</strong> (fin de semaine)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <span class="timeline-date"><i data-lucide="calendar" aria-hidden="true"></i> Semaine 6</span>
+                        <div class="timeline-card">
+                            <h3>Préparation de l'oral</h3>
+                            <p>Réviser et s'entraîner pour l'examen.</p>
+                            <ul>
+                                <li>Préparation de la <strong>démo</strong> (2-3 min)</li>
+                                <li>Révision du <strong>code</strong> (comprendre chaque fonction)</li>
+                                <li>Révision de la <strong>théorie</strong> Vue.js, Pinia, API</li>
+                                <li>Lister les <strong>améliorations possibles</strong></li>
                             </ul>
                         </div>
                     </li>
@@ -402,15 +420,16 @@
                         <div class="timeline-marker" aria-hidden="true">
                             <i data-lucide="mic"></i>
                         </div>
-                        <span class="timeline-date"><i data-lucide="calendar-check" aria-hidden="true"></i> Semaine 6</span>
+                        <span class="timeline-date"><i data-lucide="calendar-check" aria-hidden="true"></i> 3 juin (après-midi)</span>
                         <div class="timeline-card">
-                            <h3>Rendu & Défense orale</h3>
-                            <p>Livrer et défendre son projet.</p>
+                            <h3>Examen oral</h3>
+                            <p>Présenter et défendre son projet.</p>
                             <ul>
-                                <li><strong>Rendu du projet</strong> (veille de l'oral)</li>
-                                <li>Préparation de la <strong>démo</strong> (2-3 min)</li>
-                                <li>Révision du <strong>code</strong> et de la <strong>théorie</strong></li>
-                                <li><strong>Défense orale</strong> : 20 minutes par candidat</li>
+                                <li><strong>Démo</strong> de l'application (2-3 min)</li>
+                                <li>Présentation des <strong>améliorations possibles</strong></li>
+                                <li><strong>Questions théoriques</strong> : 3 questions × 6 pts = 18 pts</li>
+                                <li><strong>Questions pratiques</strong> : 3 questions × 9 pts = 27 pts</li>
+                                <li>Durée totale : <strong>~20 minutes</strong> par candidat</li>
                             </ul>
                         </div>
                     </li>
@@ -445,7 +464,7 @@
                         </ul>
                         <h4>Exercices</h4>
                         <ul>
-                            <li class="recommended"><a href="https://kode.ch/pokedex/" target="_blank">Pocket Vuetify (Pokédex)</a></li>
+                            <li class="recommended"><a href="https://kode.ch/pokedex/" target="_blank">Pokédex Vuetify</a></li>
                             <li><a href="https://kode.ch/vue-bases/" target="_blank">Exercices Vue.js de base</a></li>
                         </ul>
                     </article>
@@ -469,8 +488,8 @@
                             <a href="https://rickandmortyapi.com/" target="_blank" class="api-badge no-key recommended">👽 Rick & Morty <span class="api-theme">Série</span></a>
                             <a href="https://restcountries.com/" target="_blank" class="api-badge no-key recommended">🌍 REST Countries <span class="api-theme">Pays</span></a>
                             <a href="https://jikan.moe/" target="_blank" class="api-badge no-key">🎌 Jikan <span class="api-theme">Anime</span></a>
-                            <a href="https://www.thecocktaildb.com/api.php" target="_blank" class="api-badge no-key">🍹 TheCocktailDB <span class="api-theme">Cocktails</span></a>
-                            <a href="https://www.themealdb.com/api.php" target="_blank" class="api-badge no-key">🍽️ TheMealDB <span class="api-theme">Recettes</span></a>
+                            <a href="https://www.thecocktaildb.com/api.php" target="_blank" class="api-badge no-key" title="⚠️ Pas de liste complète gratuite - utiliser filtres par catégorie/ingrédient">🍹 TheCocktailDB <span class="api-theme">Cocktails ⚠️</span></a>
+                            <a href="https://www.themealdb.com/api.php" target="_blank" class="api-badge no-key" title="⚠️ Pas de liste complète gratuite - utiliser filtres par catégorie/zone">🍽️ TheMealDB <span class="api-theme">Recettes ⚠️</span></a>
                             <a href="https://dog.ceo/dog-api/" target="_blank" class="api-badge no-key">🐕 Dog CEO <span class="api-theme">Chiens</span></a>
                             <a href="https://api.artic.edu/" target="_blank" class="api-badge no-key">🎨 Art Chicago <span class="api-theme">Art</span></a>
                             <a href="https://metmuseum.github.io/" target="_blank" class="api-badge no-key">🏛️ MET Museum <span class="api-theme">Art</span></a>
@@ -508,6 +527,7 @@
                         </ul>
                         <div class="api-avoid">
                             <p><strong>⚠️ À éviter :</strong> OpenLibrary (pas de liste), SWAPI (pas d'images), Deezer/Spotify (restrictions), OpenWeatherMap/NASA (pas de liste)</p>
+                            <p><strong>⚠️ Attention :</strong> TheCocktailDB et TheMealDB n'ont pas de liste complète gratuite → utiliser les filtres par catégorie, ingrédient ou zone</p>
                         </div>
                     </article>
                 </div>
@@ -517,10 +537,10 @@
         <!-- Section Évaluation -->
         <section id="evaluation" class="section-bg-medium">
             <div class="section-content">
-                <h2 class="section-title">Évaluation du projet (40%)</h2>
+                <h2 class="section-title">Évaluation du projet (30 pts)</h2>
                 <div class="card">
                     <h3 id="evaluation-grid-title">Grille d'évaluation - Partie projet</h3>
-                    <p>Le projet est noté sur <strong>40 points</strong>, convertis ensuite en note sur 6. Cette partie compte pour <strong>40%</strong> de la note finale.</p>
+                    <p>Le projet est noté sur <strong>30 points</strong>, convertis ensuite en note sur 6.</p>
                     <div class="evaluation-cards" aria-label="Grille d'évaluation">
                         <article class="evaluation-card">
                             <header class="evaluation-card-header">
@@ -528,7 +548,7 @@
                                 <span class="evaluation-card-points">17 pts</span>
                             </header>
                             <p class="evaluation-card-focus"><strong>Focus :</strong> Ce que fait l'application</p>
-                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Page d'accueil, page détail, routage dynamique, navigation, favoris, recherche, filtre/tri, feedback utilisateur.</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Page d'accueil, page détail, routage dynamique, navigation, favoris, recherche, filtre, tri, feedback utilisateur.</p>
                         </article>
                         <article class="evaluation-card">
                             <header class="evaluation-card-header">
@@ -567,35 +587,34 @@
             </div>
         </section>
 
-        <!-- Section Défense orale -->
+        <!-- Section Examen oral -->
         <section id="oral" class="section-bg-primary">
             <div class="section-content">
-                <h2 class="section-title">Défense orale (60%)</h2>
+                <h2 class="section-title">Examen oral (50 pts)</h2>
                 <div class="grid cols-2">
                     <article class="card">
                         <h3>Déroulement (~20 minutes)</h3>
                         <ul>
                             <li><strong>Présentation/démo</strong> : 2-3 minutes - Montrer l'application et ses fonctionnalités</li>
                             <li><strong>Améliorations possibles</strong> : Ce que vous amélioreriez avec plus de temps</li>
-                            <li><strong>Questions théoriques</strong> : 2 questions du pool (Vue.js, Pinia, API, Vuetify)</li>
-                            <li><strong>Questions pratiques</strong> : 4 questions sur <em>votre code</em></li>
+                            <li><strong>Questions théoriques</strong> : Pool de questions (Vue.js, Pinia, API, Vuetify)</li>
+                            <li><strong>Questions pratiques</strong> : Questions sur <em>votre code</em></li>
                         </ul>
-                        <h4>Pondération des questions</h4>
+                        <h4>Répartition des points (50 pts)</h4>
                         <ul>
-                            <li>Questions théoriques : pondération <strong>×1</strong></li>
-                            <li>Questions pratiques : pondération <strong>×1.5</strong></li>
+                            <li><strong>Présentation</strong> : 5 pts (démo + améliorations possibles)</li>
+                            <li><strong>Questions théoriques</strong> : 3 questions × 6 pts = 18 pts</li>
+                            <li><strong>Questions pratiques</strong> : 3 questions × 9 pts = 27 pts</li>
                         </ul>
-                        <p><em>Les questions pratiques comptent davantage car elles valident la compréhension réelle du code.</em></p>
+                        <p><em>Chaque question est notée de 0 à 3, puis multipliée par son coefficient (×2 théorique, ×3 pratique).</em></p>
                     </article>
                     <article class="card">
                         <h3>Barème des réponses</h3>
                         <ul>
-                            <li><strong>6 - Excellent</strong> : Réponse complète, précise, avec exemples</li>
-                            <li><strong>5 - Très bien</strong> : Réponse correcte et bien formulée</li>
-                            <li><strong>4 - Suffisant</strong> : Réponse correcte avec quelques imprécisions</li>
-                            <li><strong>3 - Insuffisant</strong> : Réponse partielle ou lacunaire</li>
-                            <li><strong>2 - Très insuffisant</strong> : Réponse vague ou incorrecte</li>
-                            <li><strong>1 - Nul</strong> : Pas de réponse ou totalement faux</li>
+                            <li><strong>3 - Maîtrise complète</strong> : Réponse précise, complète et bien argumentée</li>
+                            <li><strong>2 - Maîtrise partielle</strong> : Réponse correcte mais avec quelques imprécisions ou hésitations</li>
+                            <li><strong>1 - Début de maîtrise</strong> : Réponse partielle, nécessite des relances pour aboutir</li>
+                            <li><strong>0 - Aucune évidence</strong> : Pas de réponse ou réponse totalement incorrecte</li>
                         </ul>
                     </article>
                 </div>
@@ -675,11 +694,11 @@
                             sous conditions strictes :</p>
                         <ul>
                             <li><strong>Compréhension obligatoire</strong> : Vous devez comprendre 100% du code</li>
-                            <li><strong>Oral décisif</strong> : Vous devrez expliquer votre code lors de la défense</li>
+                            <li><strong>Oral décisif</strong> : Vous devrez expliquer votre code lors de l'examen</li>
                             <li><strong>Transparence</strong> : Déclarez l'usage d'IA dans votre README</li>
                             <li><strong>Personnalisation</strong> : Adaptez le code à votre projet</li>
                         </ul>
-                        <p><strong>Attention :</strong> Un code non compris = mauvaise note à l'oral (60% de la note finale)</p>
+                        <p><strong>Attention :</strong> Un code non compris = mauvaise note à l'oral (50 pts sur 80)</p>
                     </article>
                 </div>
             </div>
@@ -727,7 +746,11 @@
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-7" class="checklist-checkbox">
-                                <label for="check-7" class="checklist-label">Filtre ou tri implémenté</label>
+                                <label for="check-7" class="checklist-label">Filtre par catégorie/type</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-7b" class="checklist-checkbox">
+                                <label for="check-7b" class="checklist-label">Tri (alphabétique, date, etc.)</label>
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-8" class="checklist-checkbox">
