@@ -236,7 +236,6 @@
                         <h4>Fichiers obligatoires</h4>
                         <ul>
                             <li><span class="mono">.env.example</span> - Template des variables d'environnement</li>
-                            <li><span class="mono">mock.json</span> - Backup des données API</li>
                         </ul>
                     </article>
                 </div>
@@ -272,7 +271,6 @@
                             <li><strong>Store Pinia</strong> : State, actions, getters</li>
                             <li><strong>Axios</strong> : Configuration dans <span class="mono">plugins/axios.js</span></li>
                             <li><strong>Variables .env</strong> : URL API préfixée <span class="mono">VITE_</span></li>
-                            <li><strong>Mock JSON</strong> : Fallback si API indisponible</li>
                             <li><strong>localStorage</strong> : Persistance des favoris</li>
                         </ul>
                     </article>
@@ -391,7 +389,6 @@
                             <h3>Finalisation & Rendu</h3>
                             <p>Peaufiner, documenter et livrer.</p>
                             <ul>
-                                <li><strong>Mock JSON</strong> créé et testé</li>
                                 <li><strong>localStorage</strong> pour la persistance</li>
                                 <li>Design responsive finalisé</li>
                                 <li><strong>README.md</strong> complet</li>
@@ -460,7 +457,6 @@
                         <ul>
                             <li class="recommended"><a href="videos/01-mettre-en-place-api-tester-console.mp4" target="_blank">Mettre en place l'API</a></li>
                             <li class="recommended"><a href="videos/02-tester-affichage-composants-vuetify.mp4" target="_blank">Tester l'affichage Vuetify</a></li>
-                            <li class="recommended"><a href="videos/03-utiliser-json-eviter-appels-api.mp4" target="_blank">Utiliser un mock JSON</a></li>
                         </ul>
                         <h4>Exercices</h4>
                         <ul>
@@ -556,7 +552,7 @@
                                 <span class="evaluation-card-points">11 pts</span>
                             </header>
                             <p class="evaluation-card-focus"><strong>Focus :</strong> Comment c'est construit</p>
-                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Store Pinia bien structuré, composants réutilisables, séparation du code, responsive, mock JSON, connexion API, localStorage.</p>
+                            <p class="evaluation-card-expected"><strong>Attendus :</strong> Store Pinia bien structuré, composants réutilisables, séparation du code, responsive, connexion API, localStorage.</p>
                         </article>
                         <article class="evaluation-card">
                             <header class="evaluation-card-header">
@@ -780,15 +776,11 @@
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-13" class="checklist-checkbox">
-                                <label for="check-13" class="checklist-label">Mock JSON créé comme backup</label>
+                                <label for="check-13" class="checklist-label">localStorage pour les favoris</label>
                             </li>
                             <li class="checklist-item">
                                 <input type="checkbox" id="check-14" class="checklist-checkbox">
-                                <label for="check-14" class="checklist-label">localStorage pour les favoris</label>
-                            </li>
-                            <li class="checklist-item">
-                                <input type="checkbox" id="check-15" class="checklist-checkbox">
-                                <label for="check-15" class="checklist-label">Design responsive (mobile + desktop)</label>
+                                <label for="check-14" class="checklist-label">Design responsive (mobile + desktop)</label>
                             </li>
                         </ul>
                     </div>
